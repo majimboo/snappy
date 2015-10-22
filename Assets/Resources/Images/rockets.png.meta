@@ -1,0 +1,319 @@
+fileFormatVersion: 2
+guid: bacea393a86fdab458fa2725dd60676b
+timeCreated: 1444719120
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: rockets_0
+    21300002: rockets_1
+    21300004: rockets_2
+    21300006: rockets_3
+    21300008: rockets_4
+    21300010: rockets_5
+    21300012: rockets_6
+    21300014: rockets_7
+    21300016: rockets_8
+    21300018: rockets_9
+    21300020: rockets_10
+    21300022: rockets_11
+    21300024: rockets_12
+    21300026: rockets_13
+    21300028: rockets_14
+    21300030: rockets_15
+    21300032: rockets_16
+    21300034: rockets_17
+    21300036: rockets_18
+    21300038: rockets_19
+    21300040: rockets_20
+    21300042: rockets_21
+    21300044: rockets_22
+    21300046: rockets_23
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: rockets_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 169
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_1
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 324
+        width: 162
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_2
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 320
+        width: 170
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_3
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 308
+        width: 178
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_4
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 320
+        width: 169
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_5
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 324
+        width: 162
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_6
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 320
+        width: 169
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_7
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 308
+        width: 177
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 166
+        width: 169
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_9
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 170
+        width: 162
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_10
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 166
+        width: 170
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_11
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 154
+        width: 178
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_12
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 166
+        width: 169
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_13
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 170
+        width: 162
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_14
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 166
+        width: 169
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_15
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 154
+        width: 177
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 169
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_17
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 16
+        width: 162
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_18
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 12
+        width: 170
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_19
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 0
+        width: 178
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_20
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 12
+        width: 169
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_21
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 16
+        width: 162
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_22
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 12
+        width: 169
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rockets_23
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 0
+        width: 177
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
