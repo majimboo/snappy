@@ -13,6 +13,7 @@ public class Manager : MonoBehaviour
     public Text coinTxt;
     public int score = 0;
     public int coins = 0;
+    public float speedo = 2f;
 
     // messages
     public GameObject startGameText;
@@ -32,6 +33,12 @@ public class Manager : MonoBehaviour
     public GameObject b_rocket;
     public GameObject g_rocket;
     public GameObject eagle;
+    public GameObject r_powerup;
+    public GameObject f_powerup;
+
+    // powers
+    public bool rainPower = false;
+    public bool firePower = false;
 
     // sprites
     private Sprite[] clouds;
@@ -154,10 +161,20 @@ public class Manager : MonoBehaviour
         while (spawning)
         {
             // figures speed of spawning
-            int delay = Random.Range(2, 4);
+            float delay = Random.Range(2, 4);
+
+            if (firePower) delay = 0.3f;
+
+            yield return new WaitForSeconds(delay);
 
             // 90% chance to spawn clouds
             if (Random.Range(1, 100) <= 90) CreateCloud();
+
+            // 10% chance to spawn powerups if score is above 10
+            if (Random.Range(1, 100) <= 10 && score >= 10 && !rainPower) CreatePowerUp(r_powerup);
+
+            // 5% chance to spawn powerups if score is above 50
+            if (Random.Range(1, 100) <= 5 && score >= 50 && !firePower) CreatePowerUp(f_powerup);
 
             // 60% chance to spawn coins
             if (Random.Range(1, 100) <= 60) CreateCoin();
@@ -173,8 +190,6 @@ public class Manager : MonoBehaviour
 
             // 50% chance to spawn eagles if score is above 100
             if (Random.Range(1, 100) <= 50 && score >= 100) CreateEagle();
-
-            yield return new WaitForSeconds(delay);
         }
     }
 
@@ -191,6 +206,15 @@ public class Manager : MonoBehaviour
         Quaternion rRotation = Quaternion.Euler(0, pRotation[Random.Range(0, pRotation.Length)], 0);
 
         Instantiate(cloud, new Vector3(cloudX, cloudY, 1f), rRotation);
+    }
+
+    int CreatePowerUp(GameObject power)
+    {
+        if (gameStart == false) return 0;
+
+        Instantiate(power, new Vector3(Random.Range(5, 10), Random.Range(-2.83f, 3.3f), 0f), Quaternion.identity);
+
+        return 1;
     }
 
     int CreateCoin()

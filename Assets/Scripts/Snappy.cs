@@ -3,6 +3,10 @@ using System.Collections;
 
 public class Snappy : MonoBehaviour {
 
+    public GameObject bubble_wrap;
+    public AudioSource powerUpRainFx;
+    public AudioSource powerUpFireFx;
+
     private Vector2 jumpForce = new Vector2(0, 350);
     private Manager manager;
 
@@ -19,13 +23,49 @@ public class Snappy : MonoBehaviour {
             GetComponent<Rigidbody2D>().AddForce(jumpForce);
         }
 
+        // maintain top position
+        var pos = transform.position;
+        pos.y = Mathf.Clamp(transform.position.y, -640.0f, 650.0f);
+        transform.position = pos;
+
         // out of bounds
         if (transform.localPosition.y <= -740) Die();
     }
 
     void OnCollisionEnter2D(Collision2D obj)
     {
-        if (obj.collider.tag == "Enemy") Die();
+        if (obj.collider.tag == "Enemy" && manager.rainPower == false && manager.firePower == false) Die();
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "RainPower")
+        {
+            manager.rainPower = true;
+            bubble_wrap.SetActive(true);
+            powerUpRainFx.Play();
+            StartCoroutine("endPowerRainUp");
+        }
+
+        if (other.tag == "FirePower")
+        {
+            manager.firePower = true;
+            powerUpFireFx.Play();
+            StartCoroutine("endPowerFireUp");
+        }
+    }
+
+    IEnumerator endPowerRainUp()
+    {
+        yield return new WaitForSeconds(10);
+        manager.rainPower = false;
+        bubble_wrap.SetActive(false);
+    }
+
+    IEnumerator endPowerFireUp()
+    {
+        yield return new WaitForSeconds(4);
+        manager.firePower = false;
     }
 
     void Die()
@@ -53,7 +93,7 @@ public class Snappy : MonoBehaviour {
     void Remove()
     {
         Destroy(gameObject);
-        Destroy(this);
+        // Destroy(this);
     }
 
 }

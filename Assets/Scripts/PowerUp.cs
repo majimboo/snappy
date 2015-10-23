@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Cloud : MonoBehaviour {
-
-    private float speed;
-    public Manager manager;
+public class PowerUp : MonoBehaviour {
+    private Manager manager;
+    private float speed = 1.5f;
 
     void Start()
     {
         manager = GameObject.Find("Manager").GetComponent<Manager>();
-        speed = Random.Range(1.4f, 2.5f);
     }
 
     void Update()
@@ -21,7 +19,18 @@ public class Cloud : MonoBehaviour {
             pos.x -= speed * Time.deltaTime;
         transform.position = pos;
 
-        if (transform.position.x <= -7.0f) Remove();
+        if (transform.position.x <= -7f) Remove();
+
+        // self destruct on gameover
+        if (manager.gameOver) Remove();
+
+        // remove power up if already have
+        if (manager.rainPower || manager.firePower) Remove();
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player") Remove();
     }
 
     void Remove()

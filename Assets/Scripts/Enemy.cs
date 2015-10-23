@@ -14,7 +14,10 @@ public class Enemy : MonoBehaviour {
     void Update()
     {
         Vector3 pos = transform.position;
-        pos.x -= speed * Time.deltaTime;
+        if (manager.firePower)
+            pos.x -= speed + manager.speedo * Time.deltaTime;
+        else
+            pos.x -= speed * Time.deltaTime;
         transform.position = pos;
 
         if (transform.position.x <= -3.5f)
